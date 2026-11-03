@@ -8,7 +8,7 @@ public class Reservation {
 
     private Customers customer ;
 
-    public Reservation(Room room, StayPeriod stay, Customers customer) {
+    public Reservation(Room room, StayPeriod stay, Customers customer, ReservationStatus status) {
 
         this.id = nextId++; 
         this.room = room;

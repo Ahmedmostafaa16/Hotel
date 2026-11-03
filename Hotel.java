@@ -54,16 +54,12 @@ public class Hotel {
     public void removeRoom(int roomNumber){
         rooms.remove(roomNumber) ;
     }
-
-    public ArrayList<Room> getAvailableRooms(StayPeriod period) {
-        ArrayList<Room> availableRooms = new ArrayList<>() ;
-        for (Room room : rooms.values()) {
-            if (!room.isRented() && !room.getStayPeriod().checkOverlap(period)) {
-                availableRooms.add(room);
-            }
-        }
-        return availableRooms;
+    public Map<Integer, Room> getRooms() {
+        return rooms;
     }
+
+
+
         
     
     
