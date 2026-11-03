@@ -1,11 +1,13 @@
-import java.util.Map;
+package hotel.service;
+
+import hotel.model.Customer;
 import java.util.HashMap;
+import java.util.Map;
 
 public class CustomerService {
+    private final Map<Integer, Customer> customers = new HashMap<>();
 
-    private final Map<Integer, Customers> customers = new HashMap<>();
-
-    public void addCustomer(Customers customer) {
+    public void addCustomer(Customer customer) {
         if (customer == null) {
             throw new IllegalArgumentException("Customer cannot be null.");
         }
@@ -15,12 +17,5 @@ public class CustomerService {
         customers.put(customer.getId(), customer);
     }
 
-    public Customers findCustomerById(int id) {
-        return customers.get(id);
-    }
-
-
-
-
-    
+    public Customer findCustomerById(int id) { return customers.get(id); }
 }
